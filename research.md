@@ -11,7 +11,7 @@ permalink: /research/
     }
 </style>
 
-    ![QBL Framework](/images/research_images/BivariateQBL.jpg)
+![QBL Framework](/images/research_images/BivariateQBL.jpg)
 
 ### Bivariate Quantitative Bayesian LASSO for Rare Haplotype Association {#project1}
 <div class="research-section">
