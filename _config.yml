@@ -14,3 +14,9 @@ social:
   github: "ihsajal"
   linkedin: "https://www.linkedin.com/in/ihsajal"
   default_txt: "Follow"
+
+nav:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
