@@ -7,7 +7,7 @@ permalink: /research/
 <style>
     /* Style to add space between sections */
     .research-section {
-        margin-bottom: 80px; /* Adjust the margin as needed */
+        margin-bottom: 100px; /* Adjust the margin as needed */
     }
 </style>
 
