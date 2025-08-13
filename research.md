@@ -16,7 +16,7 @@ permalink: /research/
     <p>Detecting associations between rare haplotypes and complex traits is challenging, especially when traits are correlated and standard univariate methods lose statistical power. My PhD research addressed this by developing the <b>bivariate quantitative Bayesian LASSO (QBL)</b>, a novel genetic association test that leverages correlation between two continuous phenotypes to improve power.</p>
     <p>I conducted extensive simulation studies to evaluate the performance of the method under various genetic architectures and applied it to the Genetic Analysis Workshop 19 (GAW19) exome sequencing data. The bivariate QBL framework was later extended to handle multiple phenotypes using mean-field variational Bayes (MFVB), significantly improving computational efficiency compared to traditional MCMC approaches.</p>
     <p>This work advances multivariate statistical genetics methodology and provides researchers with a scalable framework for analyzing rare variant haplotype associations in complex traits.</p>
-    <p>{% include image.html url="../images/research_images/qbl.jpg" height="250px" align="center" %}</p>
+    <p>{% include image.html url="../images/research_images/BivariateQBL.jpg" height="350px" align="center" %}</p>
 </div>
 
 ### CBCRisk-Mastectomy: Personalized Contralateral Breast Cancer Risk Prediction {#project2}
@@ -24,5 +24,5 @@ permalink: /research/
     <p>Contralateral breast cancer (CBC) is a serious concern for patients diagnosed with unilateral breast cancer, leading some to consider contralateral prophylactic mastectomy (CPM). However, the decision is complex and highly personal, requiring accurate individualized risk estimates.</p>
     <p>In my current role at the <b>National Cancer Institute</b>, I am developing <b>CBCRisk-Mastectomy</b>, a personalized CBC risk prediction model tailored for breast cancer patients undergoing mastectomy and considering CPM. The model integrates data from the Breast Cancer Surveillance Consortium (BCSC) and SEER, accounts for missing data via Multiple Imputation by Chained Equations (MICE), and incorporates patient-specific clinical and demographic variables.</p>
     <p>Our goal is to provide clinicians and patients with a validated decision-support tool that quantifies individualized CBC risk and informs shared decision-making regarding CPM.</p>
-    <p>{% include image.html url="../images/research_images/cbcrisk.jpg" height="250px" align="center" %}</p>
+    <p>{% include image.html url="../images/research_images/CBCRiskBlack.jpg" height="250px" align="center" %}</p>
 </div>
