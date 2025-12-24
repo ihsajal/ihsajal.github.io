@@ -4,6 +4,10 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasHonors = siteConfig.honors && siteConfig.honors.length > 0;
+const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
+const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
+
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -158,6 +162,37 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               </a>
             )
           }
+          {
+  hasHonors && (
+    <a
+      href="#honors"
+      class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+    >
+      Honors
+    </a>
+  )
+}
+{
+  hasPublications && (
+    <a
+      href="#publications"
+      class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+    >
+      Publications
+    </a>
+  )
+}
+{
+  hasTalks && (
+    <a
+      href="#talks"
+      class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+    >
+      Talks
+    </a>
+  )
+}
+
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}

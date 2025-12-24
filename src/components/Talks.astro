@@ -1,0 +1,72 @@
+---
+import { siteConfig } from "../config";
+const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
+---
+
+{
+  hasTalks && (
+    <section id="talks" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          
+          {/* Left column: title */}
+          <div class="lg:col-span-3">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
+              Talks
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          {/* Right column: talks list */}
+          <div class="lg:col-span-9">
+            <div class="space-y-6">
+              {siteConfig.talks.map((talk) => (
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+                  
+                  <div class="flex items-start gap-4 mb-2">
+  {talk.logo && (
+    <img
+      src={talk.logo}
+      alt={talk.event + " logo"}
+      class="h-24 w-auto object-contain flex-shrink-0 mt-1"
+    />
+  )}
+
+  <div>
+    <h3 class="text-base sm:text-lg font-semibold text-gray-900">
+      {talk.title}
+    </h3>
+
+    <p
+      class="text-sm sm:text-base"
+      style={`color: ${siteConfig.accentColor}`}
+    >
+      {talk.event} — {talk.type}
+    </p>
+
+    <p class="text-sm sm:text-base text-gray-600 mt-1">
+      {talk.location}, {talk.year}
+    </p>
+  </div>
+</div>
+
+{talk.description && (
+  <p class="text-sm sm:text-base text-gray-600 mt-2">
+    {talk.description}
+  </p>
+)}
+
+
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}
