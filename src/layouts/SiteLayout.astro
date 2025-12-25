@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import { siteConfig } from "../config";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = Astro.props.title
+  ? `${Astro.props.title} - ${siteConfig.name}`
+  : `${siteConfig.name} - ${siteConfig.title}`;
+
+const description = Astro.props.description ?? siteConfig.description;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{pageTitle}</title>
+  </head>
+
+<body class="bg-white text-gray-900" style="font-family: 'IBM Plex Mono', monospace;">
+  <div
+    class="relative isolate overflow-hidden"
+    style={`--accent-color: ${siteConfig.accentColor}`}
+  >
+    <!-- Gradient overlay (matches homepage hero) -->
+    <div
+      class="absolute inset-0 -z-10"
+      style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    >
+    </div>
+
+    <Header />
+    <main class="pt-20">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="CBCRisk-Black"
+  description="A personalized contralateral breast cancer risk prediction model for Black women."
+>
+  <section class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="max-w-8xl">
+
+      {/* Hero */}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        CBCRisk-Black
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-700">
+        A personalized contralateral breast cancer risk prediction tool specifically tailored for Black women.
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <span><strong>Status:</strong> Published</span>
+        <span>
+          <strong>Role:</strong> PhD student (supervised by Dr. Swati Biswas and
+          Dr. Pankaj Choudhury)
+        </span>
+        <a
+          href="https://link.springer.com/article/10.1007/s10549-022-06612-5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium underline"
+        >
+          Journal article
+        </a>
+      </div>
+
+      {/* At a glance */}
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div><strong>Domain:</strong> Cancer risk prediction</div>
+        <div><strong>Population:</strong> Black women with unilateral breast cancer</div>
+        <div><strong>Outcome:</strong> Absolute risk of developing contralateral breast cancer (CBC)</div>
+        <div><strong>Methods:</strong> Absolute risk prediction model, internal validation</div>
+        <div><strong>Deliverable:</strong> Publicly available CBC risk prediction tool</div>
+      </div>
+
+      {/* Background */}
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Background</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Black breast cancer (BC) survivors have a higher risk of developing CBC.
+          </li>
+          <li>
+            Existing risk prediction tools were largely developed using data from predominantly White populations, limiting their clinical usefulness for Black women.
+          </li>
+          <li>
+            Our project addresses this gap by developing an absolute risk prediction model, CBCRisk-Black, specifically for Black BC patients.
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Methods</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Employed a matched lasso logistic regression model for estimating relative risks (RR) using BCSC data on 744 Black women (186 cases).
+          </li>
+          <li>
+            Combined RR with relevant hazard rates from SEER data and attributable risks to obtain absolute risks.
+          </li>
+          <li>
+            Six-fold cross-validation is used to internally validate CBCRisk-Black.
+          </li>
+          <li>
+            Compared CBCRisk-Black with CBCRisk, an existing CBC risk prediction model, using area under the ROC curve.
+          </li>
+        </ul>
+      </div>
+
+{/* Results */}
+<div class="mt-10">
+  <h2 class="text-xl font-semibold text-gray-900 mb-3">Results</h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    {/* Left: bullets */}
+    <div class="lg:col-span-6">
+      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+        <li>
+          CBCRisk-Black has four risk factors: breast density, family history of BC, first BC tumor size, and age at first diagnosis of BC.
+        </li>
+        <li>
+          The model demonstrated good discrimination for predicting contralateral breast cancer risk..
+        </li>
+        <li>
+          Performance was improved relative to existing general-population model, CBCRisk, when applied to Black women.
+        </li>
+        <li>
+          AUC for 3- and 5-year predictions are 0.72 and 0.65 for CBCRisk-Black while those are 0.65 and 0.60 for CBCRisk.
+        </li>
+      </ul>
+    </div>
+
+{/* Right: image */}
+<div class="lg:col-span-6">
+  <figure class="bg-white rounded-lg border border-gray-100 p-3 shadow-sm">
+    <img
+      src="/images/CBCRiskBlack.png"
+      alt="CBCRisk-Black model performance and calibration results"
+      class="w-full h-auto rounded-md"
+      loading="lazy"
+    />
+    <figcaption class="mt-2 text-sm text-gray-600 text-center">
+      Figure: Discrimination performance of CBCRisk-Black and CBCRisk for
+      predicting absolute risk of CBC in Black women.
+    </figcaption>
+  </figure>
+</div>
+</div>
+</div>
+      {/* Takeaways */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Takeaways</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Population-specific risk modeling can improve clinical decision
+            support.
+          </li>
+          <li>
+            CBCRisk-Black provides more reliable risk estimates for Black women
+            considering surveillance and treatment options.
+          </li>
+          <li>
+            The framework highlights the importance of equity-aware model
+            development in cancer risk prediction.
+          </li>
+        </ul>
+      </div>
+
+      {/* Citation */}
+      <div class="mt-12 text-sm text-gray-600">
+        <strong>Citation:</strong><br />
+        Sajal IH, Chowdhury M, Wang T, Euhus D, Choudhary P, Biswas S.
+        <em>
+          CBCRisk-Black: A Personalized Contralateral Breast Cancer Risk
+          Prediction Model for Black Women.
+        </em>
+        Breast Cancer Research and Treatment, 2022.
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>

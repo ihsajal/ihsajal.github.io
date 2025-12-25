@@ -1,0 +1,112 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="CBCRisk-Mastectomy"
+  description="A personalized contralateral breast cancer risk prediction tool for contralateral prophylactic mastectomy decision making."
+>
+  <section class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="max-w-8xl">
+
+      {/* Hero */}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        CBCRisk-Mastectomy
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-700">
+        A personalized contralateral breast cancer (CBC) risk prediction tool designed to
+        support contralateral prophylactic mastectomy (CPM) decision making.
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <span><strong>Status:</strong> Under review</span>
+        <span>
+          <strong>Role:</strong> PhD candidate (In collaboration with Drs. Mitchell Gail, Ismail Jatoi,
+          Ruth Pfeiffer, Swati Biswas, and Pankaj Choudhury)
+        </span>
+      </div>
+
+      {/* At a glance */}
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div><strong>Domain:</strong> Cancer risk prediction / clinical decision support</div>
+        <div><strong>Population:</strong> Unilateral breast cancer patients undergoing mastectomy and considering CPM</div>
+        <div><strong>Outcome:</strong> Contralateral breast cancer risk</div>
+        <div><strong>Methods:</strong> Absolute risk prediction, multiple imputation, internal validation</div>
+        <div><strong>Deliverable:</strong> Publicly available CBC risk prediction tool for CPM counseling</div>
+      </div>
+
+      {/* Background */}
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Background</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            BC Patients should be informed of their individualized CBC risk before making an irreversible CPM decision.
+          </li>
+          <li>
+            BC patients often choose to under CPM despite substantial decrease in CBC risk in recent decades.
+          </li>
+          <li>
+            Models predicting absolute risk of future CBC can aid informed decision-making about CPM.
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Methods</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Used data on BC patients who underwent mastectomy as treatment from two nationally representative cancer registries: BCSC and SEER.
+          </li>
+          <li>
+            Imputed missing data in the BCSC sample and used conditional logistic regression models.
+          </li>
+          </li>
+            Trained on 2,660 BC patients (665 CBC cases) from BCSC sample to identify predictors and estimate relative risks (RRs).
+          </li>
+          <li>
+            Combined with attributable risks and CBC incidence rates estimated from SEER to obtain absolute risk.
+          </li>
+          <li>
+            Employed cross-validation to internally validate CBCRisk-Mastectomy and compare with CBCRisk.
+          </li>
+        </ul>
+      </div>
+
+      {/* Results */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Results</h2>
+
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            CBCRisk-Mastectomy has 9 predictors: first BC type, lobular carcinoma in situ status, estrogen receptor status, tumor stage, breast density, age at BC diagnosis, family history of BC, age at first birth, and body mass index.
+          </li>
+          <li>
+            AUC for 5-year predictions for CBCRisk-Mastectomy and CBCRisk were 0.62 (0.59, 0.65) and 0.58 (0.55, 0.61), respectively.
+          </li>
+        </ul>
+      </div>
+
+      {/* Takeaways */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Takeaways</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            CBCRisk-Mastectomy enables improved decision-making regarding CPM..
+          </li>
+          <li>
+            Personalized absolute risk estimates help align treatment choices with patient-specific benefit.
+          </li>
+        </ul>
+      </div>
+
+      {/* Citation */}
+      <div class="mt-12 text-sm text-gray-600">
+        <strong>Citation:</strong><br />
+        Manuscript under review (details to be added upon publication).
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>

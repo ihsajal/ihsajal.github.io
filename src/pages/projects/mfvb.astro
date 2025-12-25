@@ -1,0 +1,123 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="Multivariate Bayesian LASSO"
+  description="A scalable multivariate extension of Bayesian LASSO using mean-field variational Bayes for genetic association analysis."
+>
+  <section class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="max-w-8xl">
+
+      {/* Hero */}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        Multivariate Bayesian LASSO
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-700">
+        An ongoing project to extend Bayesian LASSO methods from bivariate to
+        <strong> multivariate</strong> phenotypes and enable scalable inference using
+        mean-field variational Bayes (MFVB).
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <span><strong>Status:</strong> Ongoing</span>
+        <span>
+          <strong>Role:</strong> Started the project as a PhD candidate (supervised by Dr. Swati Biswas)
+        </span>
+      </div>
+
+      {/* At a glance */}
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div><strong>Domain:</strong> Statistical genetics / Bayesian computation</div>
+        <div><strong>Setting:</strong> Multivariate genetic association</div>
+        <div><strong>Outcome:</strong> Multiple correlated quantitative phenotypes</div>
+        <div><strong>Methods:</strong> Bayesian LASSO, MFVB, scalable inference</div>
+        <div><strong>Deliverable:</strong> Multivariate framework + fast approximate inference</div>
+      </div>
+
+      {/* Background */}
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Background</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Pleiotropy is being increasingly recognized as a common phenomenon in the human genome as multiple correlated traits are driven by shared genetic factors.
+          </li>
+          <li>
+            Joint modeling can increase power and provide a more coherent view of this shared genetic etiology.
+          </li>
+          <li>
+            There is a noticeable gap in haplotype-based tests for multivariate association testing.
+          </li>
+          <li>
+            Scaling up bivariate QBL suffers from the computational burden associated with MCMC sampling, rendering QBL inefficient.
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Methods</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Variational Bayes (VB) offers a computationally efficient alternative by framing posterior estimation as an optimization problem rather than a sampling one.
+          </li>
+          <li>
+            Mean Field Variational Bayes (MFVB), which assumes independence of parameter densities to simplify the posterior approximation.
+          </li>
+          <li>
+            Derived coordinate-ascent style updates to optimize the evidence lower bound (ELBO).
+          </li>
+          <li>
+            Targeted scalable performance suitable for high-dimensional genetic data and multiple phenotypes.
+          </li>
+          <li>
+            Planned evaluation via simulation (type I error, power) and real-data application benchmarks.
+          </li>
+        </ul>
+      </div>
+
+      {/* Current progress / results */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Current progress</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Implemented the multivariate model specification and core MFVB optimization workflow.
+          </li>
+          <li>
+            Verifying stability of updates and convergence behavior on synthetic datasets.
+          </li>
+          <li>
+            Designing simulation experiments to compare against baseline univariate and bivariate approaches.
+          </li>
+          <li>
+            Preparing a real-data application to demonstrate multivariate gains in detection and interpretability.
+          </li>
+        </ul>
+      </div>
+
+      {/* Takeaways */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Takeaways</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Multivariate modeling is essential for modern studies with correlated biomarker and omics outcomes.
+          </li>
+          <li>
+            Variational inference offers a scalable alternative to MCMC for Bayesian shrinkage at high dimension.
+          </li>
+          <li>
+            This work aims to make multivariate Bayesian LASSO practical for large-scale genetic association settings.
+          </li>
+        </ul>
+      </div>
+
+      {/* Reference */}
+      <div class="mt-12 text-sm text-gray-600">
+        <strong>Reference:</strong><br />
+        Ongoing work (manuscript in preparation).
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>

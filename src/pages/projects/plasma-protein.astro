@@ -1,0 +1,138 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="Proteomic Mediators of RCC Risk Factors"
+  description="Prioritizing plasma proteomic mediators of the effects of risk factors on renal cell carcinoma (RCC) using genetic and proteomic evidence."
+>
+  <section class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="max-w-8xl">
+
+      {/* Hero */}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        Proteomic intermediates of the effects of risk factors on renal cell carcinoma
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-700">
+        Identify plasma proteins that can potentially mediate the effect of risk factors on RCC using a two-step Mendelian randomization (TSMR).
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <span><strong>Status:</strong> Ready to submit</span>
+        <span>
+          <strong>Role:</strong> Postdoctoral fellow (supervised by Dr. Diptavo Dutta, NCI)
+        </span>
+      </div>
+
+      {/* At a glance */}
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div><strong>Domain:</strong> Cancer epidemiology / proteomics / causal inference</div>
+        <div><strong>Setting:</strong> Risk factors → proteins → RCC</div>
+        <div><strong>Goal:</strong> Prioritize candidate mediating proteins</div>
+        <div><strong>Methods:</strong> Mendelian randomization concepts, colocalization, DGE</div>
+        <div><strong>Data:</strong> GWAS summary statistics + plasma proteomics resources</div>
+        <div><strong>Deliverable:</strong> Ranked mediator candidates + biological interpretation</div>
+      </div>
+
+      {/* Background */}
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Background</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Multiple risk factors (RFs) are associated with RCC, but the molecular pathways linking them to disease are not fully understood.
+          </li>
+          <li>
+            Plasma proteins can act as intermediate biomarkers and be considered as potential therapeutic targets.
+          </li>
+          <li>
+            Genetic evidence can help distinguish proteins that likely be upstream mediators from those that are reactive correlates.
+          </li>
+          <li>
+            This project prioritizes proteins that plausibly mediate RF effects on RCC using converging evidence from independent in-silico analyses.
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Methods</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Assembled genetic association evidence for RFs from different cohorts and the largest-to-date GWAS (N = 864,690; cases = 29,020) for RCC. 
+          </li>
+          <li>
+            Identified plasma protein signals associated with RFs and/or RCC in UK Biobank (2,940 proteins, N = 34,557).
+          </li>
+          <li>
+            Prioritized potential mediators based on consistent evidence across cis-MR, colocalization, and differential gene expression.
+          </li>
+          <li>
+            Used colocalization analyses to assess whether protein and RCC associations share a causal variant.
+          </li>
+          <li>
+            Integrated differential gene expression (DGE) evidence to contextualize candidates in tumor vs. normal tissue settings from The Cancer Genome Atlas (TCGA).
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods overview figure */}
+<div class="mt-12 flex justify-center">
+  <figure class="max-w-6xl bg-white rounded-lg border border-gray-100 p-4 shadow-sm">
+    <img
+      src="/images/Manhattan_PP_RCC.png"
+      alt="Workflow for prioritizing proteomic mediators of RCC risk factors"
+      class="w-full h-auto rounded-md"
+      loading="lazy"
+    />
+    <figcaption class="mt-3 text-sm text-gray-600 text-center">
+      Figure: RF-driven plasma proteins associated to RCC.
+    </figcaption>
+  </figure>
+</div>
+
+
+      {/* Results */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Results</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Identified 33 PPs whose levels were genetically influenced by at least one of 19 RCC RFs and which in turn showed evidence of an effect on RCC. 
+          </li>
+          <li>
+            Ranked candidate proteins supported by convergent evidence from genetic association, colocalization, and differential gene expression analyses.
+          </li>
+          <li>
+            Three proteins were prioritized through consistent evidence from in-silico analyses. 
+          </li>
+          <li>
+            Produced interpretable biological narratives linking RFs to protein pathways and RCC mechanisms.
+          </li>
+        </ul>
+      </div>
+
+      {/* Takeaways */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Takeaways</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            A novel approach – proteome-wide mediation landscape that links RFs to downstream proteomic agents.
+          </li>
+          <li>
+            RF first approach – illuminate the chain of causation from RF to cancer via molecular intermediaries.
+          </li>
+          <li>
+            The resulting prioritized proteins provide candidates for downstream functional validation and translational follow-up.
+          </li>
+        </ul>
+      </div>
+
+      {/* Reference */}
+      <div class="mt-12 text-sm text-gray-600">
+        <strong>Reference:</strong><br />
+        Manuscript ready to submit (preprint / journal link to be added after submission).
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>

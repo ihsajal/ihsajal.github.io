@@ -8,6 +8,9 @@ const hasHonors = siteConfig.honors && siteConfig.honors.length > 0;
 const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
 const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
 
+const isHome = Astro.url.pathname === "/";
+const homePrefix = isHome ? "" : "/";
+
 ---
 
 <header
@@ -18,7 +21,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
-          href="#about"
+          href={homePrefix + "#about"}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
           About
@@ -28,7 +31,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
         hasProjects && (
           <li>
             <a
-              href="#projects"
+              href={homePrefix + "#projects"}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               Projects
@@ -40,7 +43,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
         hasExperience && (
           <li>
             <a
-              href="#experience"
+              href={homePrefix + "#experience"}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               Experience
@@ -52,7 +55,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
         hasEducation && (
           <li>
             <a
-              href="#education"
+              href={homePrefix + "#education"}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               Education
@@ -64,7 +67,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
   hasHonors && (
     <li>
       <a
-        href="#honors"
+        href={homePrefix + "#honors"}
         class="text-gray-700 hover:text-black transition-colors font-medium"
       >
         Honors
@@ -76,7 +79,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
   hasPublications && (
     <li>
       <a
-        href="#publications"
+        href={homePrefix + "#publications"}
         class="text-gray-700 hover:text-black transition-colors font-medium"
       >
         Publications
@@ -88,7 +91,7 @@ const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
   hasTalks && (
     <li>
       <a
-        href="#talks"
+        href={homePrefix + "#talks"}
         class="text-gray-700 hover:text-black transition-colors font-medium"
       >
         Talks

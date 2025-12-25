@@ -14,25 +14,39 @@ export const siteConfig = {
   skills: ["R", "Python", "SAS", "C++", "STATA", "AWS", "HPC Environments", "Shell scripting"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "CBCRISK-BLACK",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Personalized Risk Prediction for Contralateral Breast Cancer in Black Women",
+      link: "https://ihsajal.github.io/projects/cbcrisk-black",
+      skills: ["Survival Analysis", "Conditional Logistic Regression with LASSO", "Absolute Risk", "Discrimination", "Calibration"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "CBCRISK-MASTECTOMY",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Personalized Contralateral Breast Cancer Risk Prediction to Inform Prophylactic Mastectomy Decisions",
+      link: "https://ihsajal.github.io/projects/cbcrisk-mastectomy",
+      skills: ["Multiple Imputation", "Variable Selection", "MILRT", "Cross-Validation"],
     },
     {
-      name: "ExtensionKit",
+      name: "Plasma Proteomic Intermediates of Risk Factors Effects in Renal Cell Carcinoma",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Identified plasma proteins that can potentially mediate the effects of risk factors on renal cell carcinoma using a two-step Mendelian randomization",
+      link: "https://ihsajal.github.io/projects/plasma-protein",
+      skills: ["GWAS", "Instrument Variable Analysis", "Colocalization", "Differential Gene Expression", "Mediation Analysis"],
+    },
+    {
+      name: "Bivariate Quantitative Bayesian Lasso",
+      description:
+        "Bivariate Quantitative Bayesian Lasso to detect rare haplotype association with two correlated continuous phenotypes",
+      link: "https://ihsajal.github.io/projects/biQBL",
+      skills: ["Bayesian LASSO", "Latent Variable", "Bayesian Inference", "MCMC", "Genetic Analysis Workshop 19"],
+    },
+    {
+      name: "Multivariate Bayesian Lasso (Ongoing)",
+      description:
+        "Multivariate Quantitative Bayesian Lasso via Mean-Field Variational Bayes to detect rare haplotype association with two correlated continuous phenotypes",
+      link: "https://ihsajal.github.io/projects/mfvb",
+      skills: ["Machine Learning", "Variational Inference", "Coordinate Ascent", "Simulation"],
     },
   ],
   experience: [
@@ -266,7 +280,7 @@ talks: [
   {
     title:
       "Bivariate Quantitative Bayesian LASSO for Detecting Rare Haplotype Association with Two Correlated Phenotypes",
-    event: "Southern Regional Conference on Statistics (SRCOS)",
+    event: "Southern Regional Council on Statistics (SRCOS)",
     location: "Jekyll Island, GA, USA",
     year: "2022",
     type: "Poster Presentation",

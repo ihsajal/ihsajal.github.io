@@ -1,0 +1,153 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  title="Bivariate Quantitative Bayesian LASSO"
+  description="A bivariate Bayesian LASSO framework for detecting rare haplotype associations with two correlated continuous phenotypes."
+>
+  <section class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="max-w-8xl">
+
+      {/* Hero */}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        Bivariate Quantitative Bayesian LASSO
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-700">
+        A statistical framework for detecting association of rare haplotypes with two correlated continuous phenotypes, leveraging Bayesian shrinkage
+        to improve power in low-frequency settings.
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <span><strong>Status:</strong> Published</span>
+        <span>
+          <strong>Role:</strong> PhD candidate (supervised by Dr. Swati Biswas)
+        </span>
+        <a
+          href="https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2023.1104727/full"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium underline"
+        >
+          Journal article
+        </a>
+      </div>
+
+      {/* At a glance */}
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+        <div><strong>Domain:</strong> Statistical genetics / rare variant association</div>
+        <div><strong>Setting:</strong> Rare haplotype association test</div>
+        <div><strong>Outcome:</strong> Two correlated continuous phenotypes</div>
+        <div><strong>Methods:</strong> Bayesian LASSO, shrinkage priors, MCMC</div>
+        <div><strong>Deliverable:</strong> New association test + empirical evaluation</div>
+      </div>
+
+      {/* Background */}
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Background</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Many complex traits are correlated; analyzing them jointly can improve efficiency and power.
+          </li>
+          <li>
+            Standard single-phenotype tests may miss signals that become clearer under joint modeling.
+          </li>
+          <li>
+            Lack of haplotype-based association test that can handle multiple correlated continuous phenotypes.
+          </li>
+        </ul>
+      </div>
+
+      {/* Methods */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Methods</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Regularizing the regression coefficients removes unassociated haplotypes.
+          </li>
+          <li>
+            Utilized latent variable to model correlation between two continuous phenotypes.
+          </li>
+          <li>
+            Carried out extensive simulations to investigate the performance of bivariate QBL and compare it with that of a standard (univariate) haplotype association test, Haplo.score.
+          </li>
+          <li>
+            Evaluated operating characteristics using simulation studies (type I error, power) across diverse rare-haplotype scenarios.
+          </li>
+          <li>
+            Demonstrated utility through application to Genetic Analysis Workshop (GAW) 19 exome sequencing data on systolic and diastolic blood pressures.
+          </li>
+        </ul>
+      </div>
+
+      {/* Results */}
+<div class="mt-10">
+  <h2 class="text-xl font-semibold text-gray-900 mb-3">Results</h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    {/* Left: bullets */}
+    <div class="lg:col-span-6">
+      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+        <li>
+          Maintained appropriate type I error control across a range of simulated settings.
+        </li>
+        <li>
+          Showed improved power over Haplo.score across diverse scenarios with rare haplotype effects and correlated phenotypes.
+        </li>
+        <li>
+          Produced interpretable effect estimates under shrinkage, supporting stable inference in low-frequency contexts.
+        </li>
+        <li>
+          Detected several rare haplotypes associated with systolic and diastolic blood pressure phenotypes in GAW 19.
+        </li>
+      </ul>
+    </div>
+
+    {/* Right: image */}
+    <div class="lg:col-span-6">
+      <figure class="bg-white rounded-lg border border-gray-100 p-3 shadow-sm">
+        <img
+          src="/images/BivariateQBL.png"
+          alt="biQBL simulation and real-data results"
+          class="w-full h-auto rounded-md"
+          loading="lazy"
+        />
+        <figcaption class="mt-2 text-sm text-gray-600 text-center">
+          Figure: Simulation results under sample size 500, setting 1 (6 haplotypes, both β = 1), and  ρ = 0.1.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+
+      {/* Takeaways */}
+      <div class="mt-10">
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">Takeaways</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>
+            Bivariate QBL is an important addition to the existing genetic association tests.
+          </li>
+          <li>
+            Bayesian shrinkage offers materially improved detection of rare genetic signals.
+          </li>
+          <li>
+            Bivariate QBL provides a practical framework for multivariate haplotype association in statistical genetics.
+          </li>
+        </ul>
+      </div>
+
+      {/* Citation */}
+      <div class="mt-12 text-sm text-gray-600">
+        <strong>Citation:</strong><br />
+        <strong>IH Sajal</strong> and S. Biswas (2023).
+        <em>
+          Bivariate Quantitative Bayesian LASSO for Detecting Association of Rare Haplotypes with Two Correlated Continuous Phenotypes.
+        </em>
+        Frontiers in Genetics, 14.
+      </div>
+
+    </div>
+  </section>
+</SiteLayout>
