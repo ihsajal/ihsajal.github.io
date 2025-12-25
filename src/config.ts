@@ -63,7 +63,7 @@ export const siteConfig = {
         "Perform survival analyses in RCC cases and examine relationships with risk factors and polygenic risk scores.",
         "Integrate multi-omics data to elucidate molecular mechanisms underlying cancer.",
       ],
-      logo: "/logos/nci.svg"
+      logo: "/logos/nci.png"
     },
     {
       company: "University of Texas at Dallas",
