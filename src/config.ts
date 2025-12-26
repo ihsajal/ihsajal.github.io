@@ -6,7 +6,6 @@ export const siteConfig = {
   social: {
     email: "ihossain2@isrt.ac.bd",
     linkedin: "https://www.linkedin.com/in/ihsajal/",
-    facebook: "https://www.facebook.com/Sajal027",
     github: "https://github.com/ihsajal",
   },
   aboutMe:
