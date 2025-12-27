@@ -7,6 +7,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 const hasHonors = siteConfig.honors && siteConfig.honors.length > 0;
 const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
 const hasTalks = siteConfig.talks && siteConfig.talks.length > 0;
+const hasCV = !!siteConfig.cv?.pdf || (siteConfig.references && siteConfig.references.length > 0);
 
 const isHome = Astro.url.pathname === "/";
 const homePrefix = isHome ? "" : "/";
@@ -99,6 +100,21 @@ const homePrefix = isHome ? "" : "/";
     </li>
   )
 }
+
+{
+  hasCV && (
+    <li>
+      <a
+        href={homePrefix + "#cv"}
+        class="text-gray-700 hover:text-black transition-colors font-medium"
+      >
+        CV
+      </a>
+    </li>
+  )
+}
+
+
     </ul>
   </nav>
 </header>

@@ -6,49 +6,43 @@ const hasPublications =
 
 {
   hasPublications && (
-    <section id="education" class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          
-          {/* Left column: title */}
-          <div class="lg:col-span-4">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
-              Publications
-            </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
-          </div>
+    <section id="publications" class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
+      <div class="max-w-7xl mx-auto">
+        {/* Section header (full width) */}
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
+            Publications
+          </h2>
+          <div
+            class="w-[75px] h-[5px] mt-2 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+        </div>
 
-          {/* Right column: publications list */}
-          <div class="lg:col-span-8">
-            <div class="space-y-6">
-              {siteConfig.publications.map((pub) => (
-                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                  
-                  {/* Title */}
-                  <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                    {pub.title}
-                  </h3>
+        {/* Publications list (below header) */}
+        <div class="mt-8 space-y-4">
+          {siteConfig.publications.map((pub) => (
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-3 sm:p-4 md:p-5 hover:shadow-md transition-shadow duration-300">
+              
+              {/* Title */}
+              <h3 class="text-sm sm:text-base font-semibold text-gray-900 mb-1 leading-snug">
+                {pub.title}
+              </h3>
 
-                  {/* Authors (HTML so your name can be bold) */}
-                  <p
-                    class="text-sm sm:text-base text-gray-700"
-                    set:html={pub.authors}
-                  />
+              {/* Authors */}
+              <p
+                class="text-xs sm:text-sm text-gray-700"
+                set:html={pub.authors}
+              />
 
-                  {/* Venue + year */}
-                  <p class="text-sm sm:text-base text-gray-600 mt-1">
-                    <span class="italic">{pub.venue}</span>, {pub.year}
-                    {pub.details && ` — ${pub.details}`}
-                  </p>
+              {/* Venue + year */}
+              <p class="text-xs sm:text-sm text-gray-600 mt-1">
+                <span class="italic">{pub.venue}</span>, {pub.year}
+                {pub.details && ` — ${pub.details}`}
+              </p>
 
-                </div>
-              ))}
             </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>

@@ -1,0 +1,100 @@
+---
+import { siteConfig } from "../config";
+
+const hasCV = !!siteConfig.cv?.pdf;
+const hasReferences = siteConfig.references && siteConfig.references.length > 0;
+const hasSection = hasCV || hasReferences;
+---
+
+{
+  hasSection && (
+    <section id="cv" class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
+      <div class="max-w-7xl mx-auto">
+        {/* Section header (full width) */}
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
+            CV
+          </h2>
+          <div
+            class="w-[75px] h-[5px] mt-2 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+        </div>
+
+        {/* Content */}
+        <div class="mt-8 space-y-6">
+          {/* CV download */}
+          {hasCV && (
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-900">
+                    Curriculum Vitae
+                  </h3>
+                  {siteConfig.cv?.updated && (
+                    <p class="text-sm text-gray-600 mt-1">
+                      Last updated: {siteConfig.cv.updated}
+                    </p>
+                  )}
+                </div>
+
+                <a
+                  href={siteConfig.cv.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm sm:text-base font-medium hover:underline"
+                  style={`color: ${siteConfig.accentColor}`}
+                >
+                  {siteConfig.cv?.label ?? "Download (PDF)"}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* References */}
+          {hasReferences && (
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-3">
+                References
+              </h3>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {siteConfig.references.map((r) => (
+                  <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md transition-shadow duration-300">
+                    <p class="text-base font-semibold text-gray-900">
+                      {r.name}
+                    </p>
+
+                    {r.title && (
+                      <p class="text-sm text-gray-600 mt-1">
+                        {r.title}
+                      </p>
+                    )}
+
+                    {r.relation && (
+                      <p class="text-sm text-gray-600 mt-1">
+                        <strong>Relation:</strong> {r.relation}
+                      </p>
+                    )}
+
+                    {r.email && (
+                      <p class="text-sm text-gray-600 mt-2">
+                        <a
+                          href={`mailto:${r.email}`}
+                          class="hover:underline"
+                          style={`color: ${siteConfig.accentColor}`}
+                        >
+                          {r.email}
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}

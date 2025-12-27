@@ -1,67 +1,83 @@
 ---
 import { siteConfig } from "../config";
 const hasHonors = siteConfig.honors && siteConfig.honors.length > 0;
+
+// Easy control: change this number anytime (4 -> 5, etc.)
+const cardsPerRow = 4;
+
+// Tailwind needs explicit class names (we map the number to a class)
+const gridColsLg =
+  cardsPerRow === 2
+    ? "lg:grid-cols-2"
+    : cardsPerRow === 3
+      ? "lg:grid-cols-3"
+      : cardsPerRow === 4
+        ? "lg:grid-cols-4"
+        : cardsPerRow === 5
+          ? "lg:grid-cols-5"
+          : cardsPerRow === 6
+            ? "lg:grid-cols-6"
+            : "lg:grid-cols-4"; // default fallback
 ---
 
 {
   hasHonors && (
-    <section id="education" class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-3">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
-              Honors
-            </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
-          </div>
+    <section id="honors" class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24">
+      <div class="max-w-7xl mx-auto">
+        {/* Section header (full width) */}
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900">
+            Honors
+          </h2>
+          <div
+            class="w-[75px] h-[5px] mt-2 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+        </div>
 
-          <div class="lg:col-span-9">
-            <div class="space-y-8">
-              {siteConfig.honors.map((h) => (
-                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-3">
-                    <div>
-                      <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
-                        {h.title}
-                      </h3>
-                      <p
-                        class="text-base sm:text-lg"
-                        style={`color: ${siteConfig.accentColor}`}
-                      >
-                        {h.organization}
-                      </p>
-                    </div>
+        {/* Cards grid */}
+        <div class={`mt-8 grid grid-cols-1 sm:grid-cols-2 ${gridColsLg} gap-6`}>
+          {siteConfig.honors.map((h) => (
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="mb-3">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-snug">
+                {h.title}
+                </h3>
 
-                    <span class="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
-                      {h.year}
-                    </span>
-                  </div>
+                <p
+                class="text-sm sm:text-base"
+                style={`color: ${siteConfig.accentColor}`}
+                >
+                {h.organization}
+                </p>
 
-                  {h.description && (
-                    <p class="text-sm sm:text-base text-gray-600">
-                      {h.description}
-                    </p>
-                  )}
-                  {h.pdf && (
-  <div class="mt-4">
-    <a
-      href={h.pdf}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center text-sm sm:text-base font-medium hover:underline"
-      style={`color: ${siteConfig.accentColor}`}
-    >
-      View certificate (PDF)
-    </a>
-  </div>
-)}
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                {h.year}
+                </p>
+              </div>
+
+
+              {h.description && (
+                <p class="text-sm text-gray-600">
+                  {h.description}
+                </p>
+              )}
+
+              {h.pdf && (
+                <div class="mt-4">
+                  <a
+                    href={h.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center text-sm font-medium hover:underline"
+                    style={`color: ${siteConfig.accentColor}`}
+                  >
+                    View certificate (PDF)
+                  </a>
                 </div>
-              ))}
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -27,7 +27,7 @@ export const siteConfig = {
       skills: ["Multiple Imputation", "Variable Selection", "MILRT", "Cross-Validation"],
     },
     {
-      name: "Plasma Proteomic Intermediates of Risk Factors Effects in Renal Cell Carcinoma",
+      name: "Proteomic Intermediates of Risk Factors Effects in Lung Cancert",
       description:
         "Identified plasma proteins that can potentially mediate the effects of risk factors on renal cell carcinoma using a two-step Mendelian randomization",
       link: "https://ihsajal.github.io/projects/plasma-protein",
@@ -93,7 +93,7 @@ export const siteConfig = {
   education: [
     {
       school: "The University of Texas at Dallas, TX, USA",
-      degree: "PhD in Data Science and Statistics",
+      degree: "Ph.D. in Data Science and Statistics",
       dateRange: "2019-2024",
       achievements: [
         "Completed four research projects across two distinct thematic areas, resulting in three peer-reviewed scientific publications",
@@ -136,7 +136,7 @@ export const siteConfig = {
     title: "Mei Lein Fellowship",
     organization: "The University of Texas at Dallas",
     year: "May 2023, May 2022",
-    description: "Awarded for academic excellence, sponsored by School of Natural Science & Mathematics.",
+    description: "Awarded fellowship for academic excellence, sponsored by School of Natural Science & Mathematics.",
   },
   {
     title: "Conference Travel Award",
@@ -160,7 +160,7 @@ export const siteConfig = {
     title: "Summer Institute in Statistical Genetics Scholarship",
     organization: "University of Washington",
     year: "May 2021",
-    description: "Awarded to attend summer school in statistical genetics, funded by University of Washington.",
+    description: "Awarded scholarship to attend summer school in statistical genetics, funded by University of Washington.",
   },
   {
     title: "Academic Excellence Award",
@@ -288,5 +288,32 @@ talks: [
     logo: "/logos/srcos.png",
   },
 ],
+
+cv: {
+    label: "Download CV (PDF)",
+    pdf: "/documents/IbrahimHossainSajal_Resume.pdf",
+    updated: "Dec 2025",
+  },
+
+references: [
+    {
+      name: "Dr. Swati Biswas",
+      title: "Professor, The University of Texas at Dallas",
+      relation: "PhD advisor",
+      email: "swati.biswas@utdallas.edu",
+    },
+    {
+      name: "Dr. Pankaj Choudhary",
+      title: "Professor, The University of Texas at Dallas",
+      relation: "Research advisor",
+      email: "pankaj@utdallas.edu",
+    },
+    {
+      name: "Dr. Diptavo Dutta",
+      title: "Investigator, National Cancer Institute (NCI), NIH",
+      relation: "Postdoctoral supervisor",
+      email: "diptavo.dutta@nih.gov",
+    },
+  ],    
 
 };
