@@ -27,7 +27,7 @@ export const siteConfig = {
       skills: ["Multiple Imputation", "Variable Selection", "MILRT", "Cross-Validation"],
     },
     {
-      name: "Proteomic Intermediates of Risk Factors Effects in Lung Cancert",
+      name: "Proteomic Intermediates of Risk Factors Effects in Lung Cancer",
       description:
         "Identified plasma proteins that can potentially mediate the effects of risk factors on renal cell carcinoma using a two-step Mendelian randomization",
       link: "https://ihsajal.github.io/projects/plasma-protein",
