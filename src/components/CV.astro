@@ -2,8 +2,10 @@
 import { siteConfig } from "../config";
 
 const hasCV = !!siteConfig.cv?.pdf;
+const hasResume = !!siteConfig.resume?.pdf;
 const hasReferences = siteConfig.references && siteConfig.references.length > 0;
-const hasSection = hasCV || hasReferences;
+const hasSection = (hasCV || hasResume) || hasReferences;
+
 ---
 
 {
@@ -23,33 +25,63 @@ const hasSection = hasCV || hasReferences;
 
         {/* Content */}
         <div class="mt-8 space-y-6">
-          {/* CV download */}
-          {hasCV && (
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <div>
-                  <h3 class="text-base sm:text-lg font-semibold text-gray-900">
-                    Curriculum Vitae
-                  </h3>
-                  {siteConfig.cv?.updated && (
-                    <p class="text-sm text-gray-600 mt-1">
-                      Last updated: {siteConfig.cv.updated}
-                    </p>
-                  )}
-                </div>
-
-                <a
-                  href={siteConfig.cv.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center text-sm sm:text-base font-medium hover:underline"
-                  style={`color: ${siteConfig.accentColor}`}
-                >
-                  {siteConfig.cv?.label ?? "Download (PDF)"}
-                </a>
-              </div>
-            </div>
+          {/* CV + Resume download */}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {hasCV && (
+    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-900">
+            Curriculum Vitae
+          </h3>
+          {siteConfig.cv?.updated && (
+            <p class="text-sm text-gray-600 mt-1">
+              Last updated: {siteConfig.cv.updated}
+            </p>
           )}
+        </div>
+
+        <a
+          href={siteConfig.cv.pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center text-sm sm:text-base font-medium hover:underline"
+          style={`color: ${siteConfig.accentColor}`}
+        >
+          {siteConfig.cv?.label ?? "Download (PDF)"}
+        </a>
+      </div>
+    </div>
+  )}
+
+  {hasResume && (
+    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h3 class="text-base sm:text-lg font-semibold text-gray-900">
+            Resume
+          </h3>
+          {siteConfig.resume?.updated && (
+            <p class="text-sm text-gray-600 mt-1">
+              Last updated: {siteConfig.resume.updated}
+            </p>
+          )}
+        </div>
+
+        <a
+          href={siteConfig.resume.pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center text-sm sm:text-base font-medium hover:underline"
+          style={`color: ${siteConfig.accentColor}`}
+        >
+          {siteConfig.resume?.label ?? "Download (PDF)"}
+        </a>
+      </div>
+    </div>
+  )}
+</div>
+
 
           {/* References */}
           {hasReferences && (
