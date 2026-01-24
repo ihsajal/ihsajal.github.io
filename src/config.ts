@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Ibrahim Hossain Sajal",
-  title: "Postdoctoral Fellow @ NCI, NIH",
+  title: "Postdoctoral Fellow @ National Cancer Institute, National Institutes of Health",
   description: "Portfolio website of Ibrahim Hossain Sajal",
   accentColor: "#1d4ed8",
   social: {
@@ -146,7 +146,7 @@ export const siteConfig = {
   },
   {
     title: "Boyd Harshburger Travel Award",
-    organization: "Southern Regional Conference on Statistics",
+    organization: "Southern Regional Council on Statistics",
     year: "Sep 2022",
     description: "",
   },
