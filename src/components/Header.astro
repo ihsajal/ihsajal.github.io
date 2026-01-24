@@ -114,41 +114,42 @@ const navItems = [
   </nav>
 </header>
 
-<script>
-  const header = document.getElementById("header");
-  const btn = document.getElementById("menuButton");
-  const menu = document.getElementById("mobileMenu");
-  const menuIcon = document.getElementById("menuIcon");
-  const closeIcon = document.getElementById("closeIcon");
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("header");
+    const btn = document.getElementById("menuButton");
+    const menu = document.getElementById("mobileMenu");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
 
-  function setOpen(isOpen) {
-    if (!btn || !menu || !menuIcon || !closeIcon) return;
-    btn.setAttribute("aria-expanded", String(isOpen));
-    menu.classList.toggle("hidden", !isOpen);
-    menuIcon.classList.toggle("hidden", isOpen);
-    closeIcon.classList.toggle("hidden", !isOpen);
-  }
-
-  btn?.addEventListener("click", () => {
-    const isOpen = btn.getAttribute("aria-expanded") === "true";
-    setOpen(!isOpen);
-  });
-
-  // Close menu after clicking any link in the dropdown
-  menu?.addEventListener("click", (e) => {
-    const t = e.target;
-    if (t && t.tagName === "A") setOpen(false);
-  });
-
-  // Add background blur after scroll (same behavior as before)
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+    function setOpen(isOpen) {
+      if (!btn || !menu || !menuIcon || !closeIcon) return;
+      btn.setAttribute("aria-expanded", String(isOpen));
+      menu.classList.toggle("hidden", !isOpen);
+      menuIcon.classList.toggle("hidden", isOpen);
+      closeIcon.classList.toggle("hidden", !isOpen);
     }
+
+    btn?.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    menu?.addEventListener("click", (e) => {
+      const t = e.target;
+      if (t && t.tagName === "A") setOpen(false);
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        header?.classList.add("bg-white/80", "backdrop-blur-sm");
+      } else {
+        header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+      }
+    });
   });
 </script>
+
 
 <style>
   html {
