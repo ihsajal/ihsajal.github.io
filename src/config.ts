@@ -9,7 +9,7 @@ export const siteConfig = {
     github: "https://github.com/ihsajal",
   },
   aboutMe:
-    "I'm a postdoctoral fellow at the National Cancer Institute (NCI) with expertise in statistical genetics, biostatistics, and cancer epidemiology. My research focuses on genetic association methods, Bayesian and machine-learning approaches, and the development of personalized cancer risk prediction models, particularly in breast and other cancers. I have extensive experience working with large-scale population and registry data, including BCSC, SEER, and biobank resources, and I develop scalable multivariate methods to study complex genetic and molecular mechanisms underlying cancer risk and outcomes.",
+    "I am a statistician with a PhD in Data Science & Statistics, with 6+ years of experience in statistical genetics, biostatistics, and cancer epidemiology to drive biomarker discovery and cancer risk prediction in biomedical research. I'm currently working as a postdoctoral fellow at the Integrative Tumor Epidemiology Branch in the National Cancer Institute. My research focuses on genetic association methods, Bayesian and machine-learning approaches, and the development of personalized cancer risk prediction models, particularly in breast and other cancers. I have extensive experience working with large-scale population and registry data, including BCSC, SEER, and biobank resources, and I develop scalable multivariate methods to study complex genetic and molecular mechanisms underlying cancer risk and outcomes.",
   skills: ["R", "Python", "SAS", "C++", "STATA", "AWS", "HPC Environments", "Shell scripting"],
   projects: [
     {

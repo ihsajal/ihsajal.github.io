@@ -23,10 +23,10 @@ const description = Astro.props.description ?? siteConfig.description;
     <title>{pageTitle}</title>
   </head>
 
-<body class="bg-white text-gray-900">
+<body class="min-h-screen bg-white text-gray-900 flex flex-col">
 
   <div
-    class="relative isolate overflow-hidden"
+    class="relative isolate overflow-hidden flex min-h-screen flex-col"
     style={`--accent-color: ${siteConfig.accentColor}`}
   >
     <!-- Gradient overlay (matches homepage hero) -->
@@ -37,7 +37,7 @@ const description = Astro.props.description ?? siteConfig.description;
     </div>
 
     <Header />
-    <main class="pt-20">
+    <main class="flex-1">
       <slot />
     </main>
     <Footer />
