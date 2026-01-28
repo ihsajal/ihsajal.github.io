@@ -292,14 +292,14 @@ talks: [
 
 cv: {
     label: "Download CV (PDF)",
-    pdf: "/documents/IbrahimHossainSajal_CV.pdf",
-    updated: "Dec 2025",
+    pdf: "/documents/IbrahimHossainSajal_CV_Final.pdf",
+    updated: "Jan 2026",
   },
 
 resume: {
     label: "Download Resume (PDF)",
-    pdf: "/documents/IbrahimHossainSajal_Resume.pdf",
-    updated: "Dec 2025",
+    pdf: "/documents/IbrahimHossainSajal_Resume_SG.pdf",
+    updated: "Jan 2026",
   },
 
 references: [
