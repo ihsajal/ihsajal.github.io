@@ -12,6 +12,14 @@ export const siteConfig = {
     "I am a statistician with a PhD in Data Science & Statistics, with 6+ years of experience in statistical genetics, biostatistics, and cancer epidemiology to drive biomarker discovery and cancer risk prediction in biomedical research. I'm currently working as a postdoctoral fellow at the Integrative Tumor Epidemiology Branch in the National Cancer Institute. My research focuses on genetic association methods, Bayesian and machine-learning approaches, and the development of personalized cancer risk prediction models, particularly in breast and other cancers. I have extensive experience working with large-scale population and registry data, including BCSC, SEER, and biobank resources, and I develop scalable multivariate methods to study complex genetic and molecular mechanisms underlying cancer risk and outcomes.",
   skills: ["R", "Python", "SAS", "C++", "STATA", "AWS", "HPC Environments", "Shell scripting"],
   projects: [
+    
+    {
+      name: "Proteomic Intermediates of Risk Factors Effects in Lung Cancer",
+      description:
+        "Identified plasma proteins that can potentially mediate the effects of risk factors on renal cell carcinoma using a two-step Mendelian randomization",
+      link: "https://ihsajal.github.io/projects/plasma-protein",
+      skills: ["GWAS", "Instrument Variable Analysis", "Colocalization", "Differential Gene Expression", "Mediation Analysis"],
+    },
     {
       name: "CBCRISK-BLACK",
       description:
@@ -25,13 +33,6 @@ export const siteConfig = {
         "Personalized Contralateral Breast Cancer Risk Prediction to Inform Prophylactic Mastectomy Decisions",
       link: "https://ihsajal.github.io/projects/cbcrisk-mastectomy",
       skills: ["Multiple Imputation", "Variable Selection", "MILRT", "Cross-Validation"],
-    },
-    {
-      name: "Proteomic Intermediates of Risk Factors Effects in Lung Cancer",
-      description:
-        "Identified plasma proteins that can potentially mediate the effects of risk factors on renal cell carcinoma using a two-step Mendelian randomization",
-      link: "https://ihsajal.github.io/projects/plasma-protein",
-      skills: ["GWAS", "Instrument Variable Analysis", "Colocalization", "Differential Gene Expression", "Mediation Analysis"],
     },
     {
       name: "Bivariate Quantitative Bayesian Lasso",
