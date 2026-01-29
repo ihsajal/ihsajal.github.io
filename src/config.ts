@@ -298,7 +298,7 @@ cv: {
 
 resume: {
     label: "Download Resume (PDF)",
-    pdf: "/documents/IbrahimHossainSajal_Resume_SG.pdf",
+    pdf: "/documents/IbrahimHossainSajal_Resume.pdf",
     updated: "Jan 2026",
   },
 
