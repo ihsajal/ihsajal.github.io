@@ -293,7 +293,7 @@ talks: [
 cv: {
     label: "Download CV (PDF)",
     pdf: "/documents/IbrahimHossainSajal_CV.pdf",
-    updated: "Jan 2026",
+    updated: "Feb 2026",
   },
 
 resume: {
