@@ -180,6 +180,24 @@ export const siteConfig = {
 publications: [
   {
     title:
+      "CBCRisk-Mastectomy: A Prediction Tool to Aid Contralateral Prophylactic Mastectomy Decision-making.",
+    authors:
+      "<strong>IH Sajal</strong>, R.M. Pfeiffer, I. Jatoi, M.H. Gail, R.S. Cecchini, P.K. Choudhary, and S. Biswas",
+    venue: "Journal of Surgical Research",
+    year: "2026",
+    details: "Volume 325 (336-346)",
+  },
+  {
+    title:
+      "Integrative analysis prioritizes proteins associated with renal cell carcinoma and its risk factors.",
+    authors:
+      "<strong>IH Sajal</strong> A.J. Song, K.M. Brown, M.J. Machiela, P. Kraft, S. Chanock, M.P. Purdue, and D. Dutta",
+    venue: "JNCI Cancer Spectrum",
+    year: "2026",
+    details: "Volume 10(5)",
+  },
+  {
+    title:
       "Bivariate Quantitative Bayesian LASSO for Detecting Association of Rare Haplotypes with Two Correlated Continuous Phenotypes",
     authors:
       "<strong>IH Sajal</strong> and S. Biswas",
@@ -252,6 +270,26 @@ publications: [
   },
 ],
 talks: [
+    {
+    title: "Meta-trans: A generalized summary statistics-based aggregative approach to identify trans-regulation of gene-sets by disease related variants",
+    event: "STATGEN",
+    location: "Atlanta, GA, USA",
+    year: "2026",
+    type: "Poster Presentation",
+    description:
+      "Presented research on summary statistics based implementations of multiple phenotype tests, representing complimentary association patterns with optimized p-value calculations using generalized pareto approximation.",
+    logo: "/logos/SSGG_logo.png",
+  },
+  {
+    title: "Integrative analysis identifies proteomic intermediates associated with Renal Cell Carcinoma and its risk factors",
+    event: "American Association for Cancer Research",
+    location: "San Diego, CA, USA",
+    year: "2026",
+    type: "Poster Presentation",
+    description:
+      "Presented research on investigating proteomic intermediates linking risk factors to kidney cancer.",
+    logo: "/logos/AACR_2026.jpg",
+  },
   {
     title: "Prioritizing plasma proteomic mediators of the effects of risk factors on renal cell carcinoma",
     event: "NIH Research Festival",
@@ -259,7 +297,7 @@ talks: [
     year: "2025",
     type: "Poster Presentation",
     description:
-      "Presented research on investigating proteomic intermediaries linking cancer risk factors to lung cancer.",
+      "Presented research on investigating proteomic intermediates linking risk factors to kidney cancer.",
     logo: "/logos/nih.svg",
   },
   {
@@ -299,8 +337,8 @@ talks: [
 
 cv: {
     label: "Download CV (PDF)",
-    pdf: "/documents/IbrahimHossainSajal_CV.pdf",
-    updated: "Feb 2026",
+    pdf: "/documents/CV_IbrahimHossain_Sajal.pdf",
+    updated: "Oct 2026",
   },
 
 resume: {
