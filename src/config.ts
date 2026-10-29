@@ -126,6 +126,13 @@ export const siteConfig = {
     },
   ],
   honors: [
+    {
+    title: "DCEG Fellows Award for Research Excellence (DFARE)",
+    organization: "Division of Cancer Epidemiology and Genetics (DCEG), National Cancer Institute",
+    year: "October 2026",
+    description: "DFARE recognizes outstanding scientific research conducted by DCEG fellows who have made exceptional, creative contributions to a DCEG research study.",
+    pdf: "/documents/fare26.pdf",
+  },
   {
     title: "Fellows Award for Research Excellence (FARE)",
     organization: "National Institutes of Health",
